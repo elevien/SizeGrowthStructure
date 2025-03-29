@@ -6,4 +6,4 @@ include("branching.jl")
 include("drawing.jl")
 include("single_cell_models.jl")
 
-include("fig2_generate_population_data.jl")
+include("fig3_generate_lineage_data.jl")

@@ -30,7 +30,7 @@ initial_population = get_leaf_nodes(root)
 # loop over arange --------------------------------------------------------------
 Tmax = 200
 Td = 1
-Nmax = 400
+Nmax = 800
 
 data_all = []
 arange = collect(-1:0.1:3)

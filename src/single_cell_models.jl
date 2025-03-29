@@ -30,7 +30,7 @@ function generator_OU_rate(mother_x,theta)
         time,gr,l = copy(X[end][:])
         X_new[1] = time+dt
         X_new[2] = gr + 1/τ*(1-gr)*dt +  sqrt(2*D*dt)*randn() 
-        X_new[3] = l + gr*l*dt
+        X_new[3] = l + max(10e-5,gr)*l*dt
         push!(X,X_new)
         div_prob = β(gr,log.(l),y0)*dt
         r = rand(Uniform(0,1))
