@@ -1,11 +1,4 @@
 # setup model parameters --------------------------------------------------------
-dt = 0.01
-τ = 1
-D = 0.02
-σY = 0.05
-σx = sqrt(D*τ)
-α = 0.5
-init = [0,1.,1]
 
 function φ(y, y0, σY, α)
     μ = log(2) + α * y0
@@ -28,12 +21,12 @@ grow_tree!(root,terminate,θ_OU_rate,generator_OU_rate)
 initial_population = get_leaf_nodes(root)
 
 # loop over arange --------------------------------------------------------------
-Tmax = 200
-Td = 1
-Nmax = 800
+Tmax = 10
+Td = 2
+Nmax = 1000
 
 data_all = []
-arange = collect(-1:0.1:3)
+arange = collect(-1:0.4:3)
 for i in 1:length(arange)
     # Create a fresh copy of the initial population for each a value
     population = deepcopy(initial_population)

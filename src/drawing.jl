@@ -1,7 +1,4 @@
 
-
-
-
 function recursive_draw_tree(ax,node,x0,y0,depth,h,lw)
     val = 0. #max(0.2,min(abs(node.label/(τ*D)),1))
     clr = (val,val,val)
